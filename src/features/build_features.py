@@ -61,8 +61,8 @@ def _detect_ssta_path(processed_dir: str, project_name: str) -> str:
 
 def _read_monthly_series(path: str) -> pd.DataFrame:
     import os
-    import pandas as pd
-    import numpy as np
+    import pandas as pd # type: ignore
+    import numpy as np # type: ignore
 
     # 1) Load
     ext = os.path.splitext(path)[1].lower()
