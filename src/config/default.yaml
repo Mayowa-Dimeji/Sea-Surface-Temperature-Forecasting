@@ -38,6 +38,7 @@ evaluation:
 output:
   reports_dir: "reports"
   figures_dir: "reports/figures"
+
 models:
   nbeats:
     backcast_window: 36 # months of history per input window (try 24–60)

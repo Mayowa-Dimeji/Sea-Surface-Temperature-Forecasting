@@ -216,34 +216,7 @@ python scripts/make_report.py --config src/config/default.yaml
 |   +3 mo | …              |     |      |       |      |                |
 |   +6 mo | …              |     |      |       |      |                |
 
-Place rendered plots in `reports/figures/` and export a short summary in `reports/README.md`.
-
----
-
-## Frequently asked
-
-**Q: Can I use a single buoy or port station?**
-_A:_ Yes, if you have an in‑situ series (e.g., Cefas SmartBuoys). You can still use the same pipeline—just skip gridded subsetting.
-
-**Q: Will daily data blow up storage?**
-_A:_ We avoid it by using monthly OISST directly. If you must use daily, aggregate to monthly in memory and only persist the monthly series.
-
-**Q: Which baseline is best?**
-_A:_ 1991–2020 is standard for modern anomaly work; 1981–2010 is also common. Be consistent across train/test and when comparing sources.
-
----
-
-## Contributing
-
-- Use feature branches and conventional commit messages.
-- Add or update unit tests in `tests/` for new feature engineering or split logic.
-- Run linters/formatters (`ruff`, `black`) before PRs.
-
----
-
-## Licence
-
-Choose one (e.g., MIT). Add `LICENCE` file at the project root.
+Place rendered plots in `reports/figures/` and export a short summary in `reports/
 
 ---
 
