@@ -1,0 +1,30 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Environment files
+.env
+.env.*
+*.env
+!.env.example
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Tools/cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editors/OS
+.DS_Store
+.vscode/
+.idea/
