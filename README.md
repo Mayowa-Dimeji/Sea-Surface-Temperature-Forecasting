@@ -69,8 +69,8 @@ This repo is designed to be:
 ```
 .
 ├─ README.md
-├─ pyproject.toml / requirements.txt
-├─ .env.example
+├─ requirements.txt
+├─ .env
 ├─ data/
 │  ├─ external/         # climate indices (CSV/Parquet, tiny)
 │  ├─ interim/          # temporary artefacts (ignored in git)
@@ -106,8 +106,6 @@ This repo is designed to be:
    └─ test_leakage_and_splits.py
 ```
 
-> You can keep this structure even if some modules start as stubs—grow them as you go.
-
 ---
 
 ## Quick start
@@ -117,16 +115,11 @@ This repo is designed to be:
 - **Python:** 3.10+
 - Create and activate env (choose one):
 
-```bash
+````bash
 # uv + pip (fast)
 uv venv .venv && source .venv/bin/activate
 uv pip install -r requirements.txt
 
-# or: conda
-conda create -n ssta python=3.10 -y
-conda activate ssta
-pip install -r requirements.txt
-```
 
 **Key deps:** `xarray`, `pandas`, `numpy`, `netCDF4`, `cfgrib` (if needed), `statsmodels`, `scikit-learn`, `xgboost`, `matplotlib`, `pyyaml`.
 
@@ -152,7 +145,7 @@ features:
 indices:
   use: ["oni", "mei_v2"]
   lags: [0, 1, 2, 3, 4, 5, 6]
-```
+````
 
 ### 3) Minimal pipeline (tiny artefacts)
 
