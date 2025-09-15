@@ -136,7 +136,7 @@ Edit `src/config/default.yaml` (example):
 
 ```yaml
 location:
-  name: plymouth_box
+  name: ssta_plymouth
   lat_min: 50.0
   lat_max: 51.0
   lon_min: -5.0
