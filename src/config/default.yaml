@@ -1,0 +1,40 @@
+project:
+  name: ssta_plymouth
+  seed: 42
+data:
+  source: oisst_v2.1_monthly
+  location:
+    name: plymouth_box
+    lat_min: 50.0
+    lat_max: 51.0
+    lon_min: -5.0
+    lon_max: -4.0
+  time:
+    start: "1982-01-01"
+    end: "auto"
+  storage:
+    format: parquet
+    path_processed: "data/processed"
+    path_external: "data/external"
+  anomaly:
+    baseline_start: 1991
+    baseline_end: 2020
+    variable: sst
+features:
+  lags: [1, 2, 3, 4, 5, 6, 12, 18]
+  rolling_means: [3, 6, 12]
+  fourier_k: 3
+  indices:
+    use: ["oni", "mei_v2"]
+    lags: [0, 1, 2, 3, 4, 5, 6]
+forecast:
+  horizons: [1, 3, 6]
+evaluation:
+  cv:
+    scheme: rolling_origin_expanding
+    initial_train_years: 20
+    step_months: 1
+  metrics: ["mae", "rmse", "smape", "mase", "skill_vs_climo"]
+output:
+  reports_dir: "reports"
+  figures_dir: "reports/figures"

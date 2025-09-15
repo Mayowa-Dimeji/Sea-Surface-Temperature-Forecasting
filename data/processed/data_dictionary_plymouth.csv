@@ -1,0 +1,20 @@
+group,column,notes
+fourier,cos_1,Fourier seasonal term
+fourier,cos_2,Fourier seasonal term
+fourier,cos_3,Fourier seasonal term
+fourier,sin_1,Fourier seasonal term
+fourier,sin_2,Fourier seasonal term
+fourier,sin_3,Fourier seasonal term
+lags,ssta_lag1,Lagged feature
+lags,ssta_lag12,Lagged feature
+lags,ssta_lag18,Lagged feature
+lags,ssta_lag2,Lagged feature
+lags,ssta_lag3,Lagged feature
+lags,ssta_lag4,Lagged feature
+lags,ssta_lag5,Lagged feature
+lags,ssta_lag6,Lagged feature
+rolling,ssta_rollmean12,Rolling mean (past-only)
+rolling,ssta_rollmean3,Rolling mean (past-only)
+rolling,ssta_rollmean6,Rolling mean (past-only)
+target,ssta,
+trend,t,Simple time trend
